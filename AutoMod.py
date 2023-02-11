@@ -1,26 +1,26 @@
 from re import search, sub, match
 
-def Clean(message):
+def Clean(message) -> str:
     message = sub("[\&\\#\(\[\-\|\_\\\\^\@\)\]\=\}\/\*\-\+\.\!\:\;\,\?\.\§\%]+", "", message)
     message = message.lower()
     
     return message
 
 #Repeated characters
-def Repeated_characters_in(message):
+def Repeated_characters_in(message) -> bool:
     if search(LIMITE_REPEATED_CHARACTERS, message):
         return True
     else:
         return False
 
-def Set_max_repeated_characters(max_):
+def Set_max_repeated_characters(max_) -> None:
     if type(max_) != int:
         print("Max_ must be an int")
     else:
         LIMITE_REPEATED_CHARACTERS = ".{0,"+str(max_)+"}"
 
 #Ban words
-def Ban_words_in(message):
+def Ban_words_in(message) -> bool:
     message = message.lower()
     message = message.split()
     
@@ -31,10 +31,10 @@ def Ban_words_in(message):
     
     return False
 
-def Get_ban_words():
+def Get_ban_words() -> list:
     return CLEAN_BAN_WORDS
     
-def Add_ban_word(word, max_noise=4):  
+def Add_ban_word(word, max_noise=3) -> None:  
     if type(word) != str:
         print("The word must be a string")
         
@@ -58,7 +58,7 @@ def Add_ban_word(word, max_noise=4):
         BANED_WORDS.append(new_word)
         CLEAN_BAN_WORDS.append(word)
     
-def Del_ban_word(word):
+def Del_ban_word(word) -> None:
     if word not in CLEAN_BAN_WORDS:
         print("The word must be in the list")
         
@@ -71,15 +71,16 @@ def Del_ban_word(word):
         del BANED_WORDS[index]
 
 #Autorhised words
-def Get_autorhised_words():
+def Get_autorhised_words() -> list:
     return AUTORHISED_WORDS
 
-def Add_autorhised_word(word):
+def Add_autorhised_word(word) -> None:
     if type(word) != str:
         print("The word must be a string")
     else:
         AUTORHISED_WORDS.append(word)
-def Del_ban_word(word):
+        
+def Del_ban_word(word) -> None:
     if word not in CLEAN_BAN_WORDS:
         print("The word must be in the list")
 
