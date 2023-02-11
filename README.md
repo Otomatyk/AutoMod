@@ -48,3 +48,5 @@ Documentation :
       Del_ban_word(word) -> None
 
 You could give a star if you like/use it !
+
+If you have a suggestion or a question you can contact me on gmail@otomatyk.com
