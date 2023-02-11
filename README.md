@@ -1,5 +1,7 @@
 # AutoMod
-The AutoMod Python library, for filtering messages with strong words
+The AutoMod Python library, for filtering messages with words you set
+
+Easy to understand, if you don't have budget for moderate your Python application/website you can use it 
 
 -------------
 
