@@ -46,3 +46,5 @@ Documentation :
       Get_autorhised_words() -> list of string
       Add_autorhised_word(word) -> None
       Del_ban_word(word) -> None
+
+You could give a star if you like/use it !
